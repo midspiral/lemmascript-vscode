@@ -1,0 +1,65 @@
+{
+  "name": "lemmascript-vscode",
+  "displayName": "LemmaScript",
+  "description": "Syntax highlighting for LemmaScript contracts in TypeScript — and (later) a viewer for verification results.",
+  "version": "0.1.0",
+  "preview": true,
+  "publisher": "midspiral",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "lemmascript",
+    "verification",
+    "formal-methods",
+    "dafny",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/midspiral/lemmascript-vscode"
+  },
+  "contributes": {
+    "grammars": [
+      {
+        "scopeName": "lemmascript.injection",
+        "path": "./syntaxes/lemmascript.injection.json",
+        "injectTo": [
+          "source.ts",
+          "source.tsx",
+          "source.js",
+          "source.jsx"
+        ]
+      }
+    ],
+    "configurationDefaults": {
+      "editor.tokenColorCustomizations": {
+        "textMateRules": [
+          {
+            "scope": "punctuation.definition.annotation.lemmascript",
+            "settings": { "fontStyle": "bold" }
+          },
+          {
+            "scope": "keyword.control.lemmascript",
+            "settings": { "fontStyle": "bold" }
+          }
+        ]
+      }
+    }
+  },
+  "scripts": {
+    "fetch-ts-grammar": "node scripts/fetch-ts-grammar.mjs",
+    "pretest:grammar": "npm run fetch-ts-grammar",
+    "test:grammar": "vscode-tmgrammar-snap -g test/vendor/TypeScript.tmLanguage.json -g syntaxes/lemmascript.injection.json -s source.ts \"test/grammar/*.sample.ts\"",
+    "test:grammar:update": "npm run pretest:grammar && vscode-tmgrammar-snap -u -g test/vendor/TypeScript.tmLanguage.json -g syntaxes/lemmascript.injection.json -s source.ts \"test/grammar/*.sample.ts\"",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.2.0",
+    "vscode-tmgrammar-test": "^0.1.3"
+  }
+}

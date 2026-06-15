@@ -1,0 +1,472 @@
+>// A representative LemmaScript file used as a grammar-tokenization snapshot
+#^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.ts comment.line.double-slash.ts
+>// fixture. Adapted from LemmaScript/examples. Every directive and spec construct
+#^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.ts comment.line.double-slash.ts
+>// the injection grammar recognizes should appear at least once below.
+#^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.ts comment.line.double-slash.ts
+>
+>// An ordinary comment — must NOT be treated as an annotation.
+#^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.ts comment.line.double-slash.ts
+>// Contact me @home about this.
+#^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.ts comment.line.double-slash.ts
+>
+>//@ pure
+#^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#  ^ source.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#   ^ source.ts comment.line.double-slash.ts
+#    ^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript
+>function occOf(arr: number[], x: number, n: number): number {
+#^^^^^^^^ source.ts meta.function.ts storage.type.function.ts
+#        ^ source.ts meta.function.ts
+#         ^^^^^ source.ts meta.function.ts meta.definition.function.ts entity.name.function.ts
+#              ^ source.ts meta.function.ts meta.parameters.ts punctuation.definition.parameters.begin.ts
+#               ^^^ source.ts meta.function.ts meta.parameters.ts variable.parameter.ts
+#                  ^ source.ts meta.function.ts meta.parameters.ts meta.type.annotation.ts keyword.operator.type.annotation.ts
+#                   ^ source.ts meta.function.ts meta.parameters.ts meta.type.annotation.ts
+#                    ^^^^^^ source.ts meta.function.ts meta.parameters.ts meta.type.annotation.ts support.type.primitive.ts
+#                          ^ source.ts meta.function.ts meta.parameters.ts meta.type.annotation.ts meta.type.tuple.ts meta.brace.square.ts
+#                           ^ source.ts meta.function.ts meta.parameters.ts meta.type.annotation.ts meta.type.tuple.ts meta.brace.square.ts
+#                            ^ source.ts meta.function.ts meta.parameters.ts punctuation.separator.parameter.ts
+#                             ^ source.ts meta.function.ts meta.parameters.ts
+#                              ^ source.ts meta.function.ts meta.parameters.ts variable.parameter.ts
+#                               ^ source.ts meta.function.ts meta.parameters.ts meta.type.annotation.ts keyword.operator.type.annotation.ts
+#                                ^ source.ts meta.function.ts meta.parameters.ts meta.type.annotation.ts
+#                                 ^^^^^^ source.ts meta.function.ts meta.parameters.ts meta.type.annotation.ts support.type.primitive.ts
+#                                       ^ source.ts meta.function.ts meta.parameters.ts punctuation.separator.parameter.ts
+#                                        ^ source.ts meta.function.ts meta.parameters.ts
+#                                         ^ source.ts meta.function.ts meta.parameters.ts variable.parameter.ts
+#                                          ^ source.ts meta.function.ts meta.parameters.ts meta.type.annotation.ts keyword.operator.type.annotation.ts
+#                                           ^ source.ts meta.function.ts meta.parameters.ts meta.type.annotation.ts
+#                                            ^^^^^^ source.ts meta.function.ts meta.parameters.ts meta.type.annotation.ts support.type.primitive.ts
+#                                                  ^ source.ts meta.function.ts meta.parameters.ts punctuation.definition.parameters.end.ts
+#                                                   ^ source.ts meta.function.ts meta.return.type.ts keyword.operator.type.annotation.ts
+#                                                    ^ source.ts meta.function.ts meta.return.type.ts
+#                                                     ^^^^^^ source.ts meta.function.ts meta.return.type.ts support.type.primitive.ts
+#                                                           ^ source.ts meta.function.ts meta.return.type.ts
+#                                                            ^ source.ts meta.function.ts meta.block.ts punctuation.definition.block.ts
+>  //@ requires 0 <= n && n <= arr.length
+#^^ source.ts meta.function.ts meta.block.ts punctuation.whitespace.comment.leading.ts
+#  ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#    ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#     ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#      ^^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#              ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#               ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts constant.numeric.lemmascript
+#                ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                 ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                   ^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                      ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                        ^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                           ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                             ^^^^^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+>  //@ decreases n
+#^^ source.ts meta.function.ts meta.block.ts punctuation.whitespace.comment.leading.ts
+#  ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#    ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#     ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#      ^^^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#               ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+>  //@ type n nat
+#^^ source.ts meta.function.ts meta.block.ts punctuation.whitespace.comment.leading.ts
+#  ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#    ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#     ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#      ^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#          ^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#             ^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts support.type.lemmascript
+>  return n === 0 ? 0 : occOf(arr, x, n - 1) + (arr[n - 1] === x ? 1 : 0);
+#^^ source.ts meta.function.ts meta.block.ts
+#  ^^^^^^ source.ts meta.function.ts meta.block.ts keyword.control.flow.ts
+#        ^ source.ts meta.function.ts meta.block.ts
+#         ^ source.ts meta.function.ts meta.block.ts variable.other.readwrite.ts
+#          ^ source.ts meta.function.ts meta.block.ts
+#           ^^^ source.ts meta.function.ts meta.block.ts keyword.operator.comparison.ts
+#              ^ source.ts meta.function.ts meta.block.ts
+#               ^ source.ts meta.function.ts meta.block.ts constant.numeric.decimal.ts
+#                ^ source.ts meta.function.ts meta.block.ts
+#                 ^ source.ts meta.function.ts meta.block.ts keyword.operator.ternary.ts
+#                  ^ source.ts meta.function.ts meta.block.ts
+#                   ^ source.ts meta.function.ts meta.block.ts constant.numeric.decimal.ts
+#                    ^ source.ts meta.function.ts meta.block.ts
+#                     ^ source.ts meta.function.ts meta.block.ts keyword.operator.ternary.ts
+#                      ^ source.ts meta.function.ts meta.block.ts
+#                       ^^^^^ source.ts meta.function.ts meta.block.ts meta.function-call.ts entity.name.function.ts
+#                            ^ source.ts meta.function.ts meta.block.ts meta.brace.round.ts
+#                             ^^^ source.ts meta.function.ts meta.block.ts variable.other.readwrite.ts
+#                                ^ source.ts meta.function.ts meta.block.ts punctuation.separator.comma.ts
+#                                 ^ source.ts meta.function.ts meta.block.ts
+#                                  ^ source.ts meta.function.ts meta.block.ts variable.other.readwrite.ts
+#                                   ^ source.ts meta.function.ts meta.block.ts punctuation.separator.comma.ts
+#                                    ^ source.ts meta.function.ts meta.block.ts
+#                                     ^ source.ts meta.function.ts meta.block.ts variable.other.readwrite.ts
+#                                      ^ source.ts meta.function.ts meta.block.ts
+#                                       ^ source.ts meta.function.ts meta.block.ts keyword.operator.arithmetic.ts
+#                                        ^ source.ts meta.function.ts meta.block.ts
+#                                         ^ source.ts meta.function.ts meta.block.ts constant.numeric.decimal.ts
+#                                          ^ source.ts meta.function.ts meta.block.ts meta.brace.round.ts
+#                                           ^ source.ts meta.function.ts meta.block.ts
+#                                            ^ source.ts meta.function.ts meta.block.ts keyword.operator.arithmetic.ts
+#                                             ^ source.ts meta.function.ts meta.block.ts
+#                                              ^ source.ts meta.function.ts meta.block.ts meta.brace.round.ts
+#                                               ^^^ source.ts meta.function.ts meta.block.ts variable.other.readwrite.ts
+#                                                  ^ source.ts meta.function.ts meta.block.ts meta.array.literal.ts meta.brace.square.ts
+#                                                   ^ source.ts meta.function.ts meta.block.ts meta.array.literal.ts variable.other.readwrite.ts
+#                                                    ^ source.ts meta.function.ts meta.block.ts meta.array.literal.ts
+#                                                     ^ source.ts meta.function.ts meta.block.ts meta.array.literal.ts keyword.operator.arithmetic.ts
+#                                                      ^ source.ts meta.function.ts meta.block.ts meta.array.literal.ts
+#                                                       ^ source.ts meta.function.ts meta.block.ts meta.array.literal.ts constant.numeric.decimal.ts
+#                                                        ^ source.ts meta.function.ts meta.block.ts meta.array.literal.ts meta.brace.square.ts
+#                                                         ^ source.ts meta.function.ts meta.block.ts
+#                                                          ^^^ source.ts meta.function.ts meta.block.ts keyword.operator.comparison.ts
+#                                                             ^ source.ts meta.function.ts meta.block.ts
+#                                                              ^ source.ts meta.function.ts meta.block.ts variable.other.readwrite.ts
+#                                                               ^ source.ts meta.function.ts meta.block.ts
+#                                                                ^ source.ts meta.function.ts meta.block.ts keyword.operator.ternary.ts
+#                                                                 ^ source.ts meta.function.ts meta.block.ts
+#                                                                  ^ source.ts meta.function.ts meta.block.ts constant.numeric.decimal.ts
+#                                                                   ^ source.ts meta.function.ts meta.block.ts
+#                                                                    ^ source.ts meta.function.ts meta.block.ts keyword.operator.ternary.ts
+#                                                                     ^ source.ts meta.function.ts meta.block.ts
+#                                                                      ^ source.ts meta.function.ts meta.block.ts constant.numeric.decimal.ts
+#                                                                       ^ source.ts meta.function.ts meta.block.ts meta.brace.round.ts
+#                                                                        ^ source.ts meta.function.ts meta.block.ts punctuation.terminator.statement.ts
+>}
+#^ source.ts meta.function.ts meta.block.ts punctuation.definition.block.ts
+>
+>//@ verify
+#^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#  ^ source.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#   ^ source.ts comment.line.double-slash.ts
+#    ^^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript
+>export function majority(arr: number[]): number {
+#^^^^^^ source.ts meta.function.ts keyword.control.export.ts
+#      ^ source.ts meta.function.ts
+#       ^^^^^^^^ source.ts meta.function.ts storage.type.function.ts
+#               ^ source.ts meta.function.ts
+#                ^^^^^^^^ source.ts meta.function.ts meta.definition.function.ts entity.name.function.ts
+#                        ^ source.ts meta.function.ts meta.parameters.ts punctuation.definition.parameters.begin.ts
+#                         ^^^ source.ts meta.function.ts meta.parameters.ts variable.parameter.ts
+#                            ^ source.ts meta.function.ts meta.parameters.ts meta.type.annotation.ts keyword.operator.type.annotation.ts
+#                             ^ source.ts meta.function.ts meta.parameters.ts meta.type.annotation.ts
+#                              ^^^^^^ source.ts meta.function.ts meta.parameters.ts meta.type.annotation.ts support.type.primitive.ts
+#                                    ^ source.ts meta.function.ts meta.parameters.ts meta.type.annotation.ts meta.type.tuple.ts meta.brace.square.ts
+#                                     ^ source.ts meta.function.ts meta.parameters.ts meta.type.annotation.ts meta.type.tuple.ts meta.brace.square.ts
+#                                      ^ source.ts meta.function.ts meta.parameters.ts punctuation.definition.parameters.end.ts
+#                                       ^ source.ts meta.function.ts meta.return.type.ts keyword.operator.type.annotation.ts
+#                                        ^ source.ts meta.function.ts meta.return.type.ts
+#                                         ^^^^^^ source.ts meta.function.ts meta.return.type.ts support.type.primitive.ts
+#                                               ^ source.ts meta.function.ts meta.return.type.ts
+#                                                ^ source.ts meta.function.ts meta.block.ts punctuation.definition.block.ts
+>  //@ requires forall(k: nat, k < arr.length ==> arr[k] >= 0)
+#^^ source.ts meta.function.ts meta.block.ts punctuation.whitespace.comment.leading.ts
+#  ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#    ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#     ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#      ^^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#              ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#               ^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.other.quantifier.lemmascript
+#                     ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                       ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                        ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                         ^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts support.type.lemmascript
+#                            ^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                                ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                                 ^^^^^^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                                             ^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.operator.logical.lemmascript
+#                                                ^^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                                                        ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                                                          ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                                                           ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts constant.numeric.lemmascript
+#                                                            ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+>  //@ ensures \result === -1 || (\result >= 0 && 2 * occOf(arr, \result, arr.length) > arr.length)
+#^^ source.ts meta.function.ts meta.block.ts punctuation.whitespace.comment.leading.ts
+#  ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#    ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#     ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#      ^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#             ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#              ^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts variable.language.result.lemmascript
+#                     ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                      ^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                         ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                          ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                           ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts constant.numeric.lemmascript
+#                            ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                             ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                               ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                                 ^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts variable.language.result.lemmascript
+#                                        ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                                         ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                                           ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                                            ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts constant.numeric.lemmascript
+#                                             ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                                              ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                                                ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                                                 ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts constant.numeric.lemmascript
+#                                                  ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                                                   ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                                                    ^^^^^^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                                                                ^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts variable.language.result.lemmascript
+#                                                                       ^^^^^^^^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                                                                                     ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                                                                                      ^^^^^^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+>  //@ ensures (exists(x: nat, 2 * occOf(arr, x, arr.length) > arr.length)) ==> \result !== -1
+#^^ source.ts meta.function.ts meta.block.ts punctuation.whitespace.comment.leading.ts
+#  ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#    ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#     ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#      ^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#             ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#               ^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.other.quantifier.lemmascript
+#                     ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                       ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                        ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                         ^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts support.type.lemmascript
+#                            ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                              ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts constant.numeric.lemmascript
+#                               ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                                ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                                                            ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                                                             ^^^^^^^^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                                                                           ^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.operator.logical.lemmascript
+#                                                                              ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                                                                               ^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts variable.language.result.lemmascript
+#                                                                                      ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                                                                                       ^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                                                                                          ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                                                                                           ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                                                                                            ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts constant.numeric.lemmascript
+>  //@ type i nat
+#^^ source.ts meta.function.ts meta.block.ts punctuation.whitespace.comment.leading.ts
+#  ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#    ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#     ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#      ^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#          ^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#             ^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts support.type.lemmascript
+>  let lo = 0;
+#^^ source.ts meta.function.ts meta.block.ts
+#  ^^^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts storage.type.ts
+#     ^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts
+#      ^^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts meta.var-single-variable.expr.ts meta.definition.variable.ts variable.other.readwrite.ts
+#        ^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts meta.var-single-variable.expr.ts
+#         ^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts keyword.operator.assignment.ts
+#          ^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts
+#           ^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts constant.numeric.decimal.ts
+#            ^ source.ts meta.function.ts meta.block.ts punctuation.terminator.statement.ts
+>  let hi = arr.length - 1;
+#^^ source.ts meta.function.ts meta.block.ts
+#  ^^^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts storage.type.ts
+#     ^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts
+#      ^^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts meta.var-single-variable.expr.ts meta.definition.variable.ts variable.other.readwrite.ts
+#        ^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts meta.var-single-variable.expr.ts
+#         ^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts keyword.operator.assignment.ts
+#          ^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts
+#           ^^^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts variable.other.object.ts
+#              ^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts punctuation.accessor.ts
+#               ^^^^^^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts support.variable.property.ts
+#                     ^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts
+#                      ^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts keyword.operator.arithmetic.ts
+#                       ^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts
+#                        ^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts constant.numeric.decimal.ts
+#                         ^ source.ts meta.function.ts meta.block.ts punctuation.terminator.statement.ts
+>  let result = -1;
+#^^ source.ts meta.function.ts meta.block.ts
+#  ^^^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts storage.type.ts
+#     ^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts
+#      ^^^^^^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts meta.var-single-variable.expr.ts meta.definition.variable.ts variable.other.readwrite.ts
+#            ^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts meta.var-single-variable.expr.ts
+#             ^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts keyword.operator.assignment.ts
+#              ^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts
+#               ^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts keyword.operator.arithmetic.ts
+#                ^ source.ts meta.function.ts meta.block.ts meta.var.expr.ts constant.numeric.decimal.ts
+#                 ^ source.ts meta.function.ts meta.block.ts punctuation.terminator.statement.ts
+>  while (lo <= hi) {
+#^^ source.ts meta.function.ts meta.block.ts
+#  ^^^^^ source.ts meta.function.ts meta.block.ts keyword.control.loop.ts
+#       ^ source.ts meta.function.ts meta.block.ts
+#        ^ source.ts meta.function.ts meta.block.ts meta.brace.round.ts
+#         ^^ source.ts meta.function.ts meta.block.ts variable.other.readwrite.ts
+#           ^ source.ts meta.function.ts meta.block.ts
+#            ^^ source.ts meta.function.ts meta.block.ts keyword.operator.relational.ts
+#              ^ source.ts meta.function.ts meta.block.ts
+#               ^^ source.ts meta.function.ts meta.block.ts variable.other.readwrite.ts
+#                 ^ source.ts meta.function.ts meta.block.ts meta.brace.round.ts
+#                  ^ source.ts meta.function.ts meta.block.ts
+#                   ^ source.ts meta.function.ts meta.block.ts meta.block.ts punctuation.definition.block.ts
+>    //@ invariant 0 <= lo && lo <= arr.length
+#^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts punctuation.whitespace.comment.leading.ts
+#    ^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#      ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#       ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#        ^^^^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#                 ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#                  ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts constant.numeric.lemmascript
+#                   ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#                    ^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                      ^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#                          ^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                            ^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#                                ^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                                  ^^^^^^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+>    //@ invariant result === -1 || (result >= 0 && result < arr.length)
+#^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts punctuation.whitespace.comment.leading.ts
+#    ^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#      ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#       ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#        ^^^^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#                 ^^^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#                         ^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                            ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#                             ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                              ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts constant.numeric.lemmascript
+#                               ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#                                ^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                                  ^^^^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#                                           ^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                                             ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#                                              ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts constant.numeric.lemmascript
+#                                               ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#                                                ^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                                                  ^^^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#                                                          ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                                                           ^^^^^^^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+>    //@ done_with result !== -1 || !(lo <= hi)
+#^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts punctuation.whitespace.comment.leading.ts
+#    ^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#      ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#       ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#        ^^^^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#                 ^^^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#                         ^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                            ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#                             ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                              ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts constant.numeric.lemmascript
+#                               ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#                                ^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                                  ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#                                   ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                                    ^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#                                        ^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                                          ^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+>    //@ decreases (hi - lo + 1).toNat
+#^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts punctuation.whitespace.comment.leading.ts
+#    ^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#      ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#       ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#        ^^^^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#                 ^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#                      ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                       ^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#                           ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                            ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#                             ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts constant.numeric.lemmascript
+#                              ^^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+>    //@ assert lo <= hi
+#^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts punctuation.whitespace.comment.leading.ts
+#    ^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#      ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#       ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#        ^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#              ^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+#                  ^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                    ^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
+>    result = lo;
+#^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts
+#    ^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts variable.other.readwrite.ts
+#          ^ source.ts meta.function.ts meta.block.ts meta.block.ts
+#           ^ source.ts meta.function.ts meta.block.ts meta.block.ts keyword.operator.assignment.ts
+#            ^ source.ts meta.function.ts meta.block.ts meta.block.ts
+#             ^^ source.ts meta.function.ts meta.block.ts meta.block.ts variable.other.readwrite.ts
+#               ^ source.ts meta.function.ts meta.block.ts meta.block.ts punctuation.terminator.statement.ts
+>    lo = lo + 1;
+#^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts
+#    ^^ source.ts meta.function.ts meta.block.ts meta.block.ts variable.other.readwrite.ts
+#      ^ source.ts meta.function.ts meta.block.ts meta.block.ts
+#       ^ source.ts meta.function.ts meta.block.ts meta.block.ts keyword.operator.assignment.ts
+#        ^ source.ts meta.function.ts meta.block.ts meta.block.ts
+#         ^^ source.ts meta.function.ts meta.block.ts meta.block.ts variable.other.readwrite.ts
+#           ^ source.ts meta.function.ts meta.block.ts meta.block.ts
+#            ^ source.ts meta.function.ts meta.block.ts meta.block.ts keyword.operator.arithmetic.ts
+#             ^ source.ts meta.function.ts meta.block.ts meta.block.ts
+#              ^ source.ts meta.function.ts meta.block.ts meta.block.ts constant.numeric.decimal.ts
+#               ^ source.ts meta.function.ts meta.block.ts meta.block.ts punctuation.terminator.statement.ts
+>  }
+#^^ source.ts meta.function.ts meta.block.ts meta.block.ts
+#  ^ source.ts meta.function.ts meta.block.ts meta.block.ts punctuation.definition.block.ts
+>  //@ ghost let witness = occOf(arr, result, arr.length)
+#^^ source.ts meta.function.ts meta.block.ts punctuation.whitespace.comment.leading.ts
+#  ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#    ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#     ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#      ^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+>  //@ assume result >= -1
+#^^ source.ts meta.function.ts meta.block.ts punctuation.whitespace.comment.leading.ts
+#  ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#    ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#     ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#      ^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#            ^^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                    ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                      ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#                       ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                        ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts constant.numeric.lemmascript
+>  return result;
+#^^ source.ts meta.function.ts meta.block.ts
+#  ^^^^^^ source.ts meta.function.ts meta.block.ts keyword.control.flow.ts
+#        ^ source.ts meta.function.ts meta.block.ts
+#         ^^^^^^ source.ts meta.function.ts meta.block.ts variable.other.readwrite.ts
+#               ^ source.ts meta.function.ts meta.block.ts punctuation.terminator.statement.ts
+>}
+#^ source.ts meta.function.ts meta.block.ts punctuation.definition.block.ts
+>
+>//@ declare-type Tool { name: string }
+#^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#  ^ source.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#   ^ source.ts comment.line.double-slash.ts
+#    ^^^^^^^^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript
+#                ^^^^^^^^^^^^ source.ts comment.line.double-slash.ts
+#                            ^ source.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                             ^ source.ts comment.line.double-slash.ts
+#                              ^^^^^^ source.ts comment.line.double-slash.ts support.type.lemmascript
+#                                    ^^ source.ts comment.line.double-slash.ts
+>//@ backend dafny
+#^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#  ^ source.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#   ^ source.ts comment.line.double-slash.ts
+#    ^^^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript
+#           ^^^^^^ source.ts comment.line.double-slash.ts
+>//@ extern helper
+#^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#  ^ source.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#   ^ source.ts comment.line.double-slash.ts
+#    ^^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript
+#          ^^^^^^^ source.ts comment.line.double-slash.ts
+>//@ havoc
+#^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#  ^ source.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#   ^ source.ts comment.line.double-slash.ts
+#    ^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript
+>//@ autohavoc
+#^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#  ^ source.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#   ^ source.ts comment.line.double-slash.ts
+#    ^^^^^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript
+>//@ safe-slice
+#^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#  ^ source.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#   ^ source.ts comment.line.double-slash.ts
+#    ^^^^^^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript
+>//@ assert-shaped
+#^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#  ^ source.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#   ^ source.ts comment.line.double-slash.ts
+#    ^^^^^^^^^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript
+>

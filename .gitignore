@@ -1,0 +1,4 @@
+node_modules/
+*.vsix
+# Vendored at test time from the local VS Code install (see scripts/fetch-ts-grammar.mjs)
+test/vendor/
