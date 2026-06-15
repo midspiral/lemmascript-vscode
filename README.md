@@ -33,9 +33,28 @@ Inside `//@` line comments (and only there — ordinary comments are left alone)
 - **Spec types** — `nat`, `int`, `real`, … (e.g. `//@ type i nat`).
 - Numbers, strings, booleans, and the usual comparison/logic operators.
 
-Highlighting uses standard TextMate scopes, so it picks up sensible colors from
-any theme. Directive keywords and the `@` marker are rendered **bold** by
-default (override via `editor.tokenColorCustomizations` if you prefer).
+Spec operators, quantifiers, `\result`, and literals use standard TextMate
+scopes, so they pick up sensible colors from any theme. **Each directive gets
+its own color** (e.g. `requires` is `#1B8A6E`) and is rendered bold, applied via
+the extension's `configurationDefaults`.
+
+To recolor a single directive, override its scope in your `settings.json`:
+
+```jsonc
+"editor.tokenColorCustomizations": {
+  "textMateRules": [
+    { "scope": "keyword.control.lemmascript.requires",
+      "settings": { "foreground": "#1B8A6E", "fontStyle": "bold" } }
+  ]
+}
+```
+
+Every directive's scope is `keyword.control.lemmascript.<directive>` (e.g.
+`keyword.control.lemmascript.ensures`, `….invariant`, `….done_with`). Confirm a
+token's scope with **Developer: Inspect Editor Tokens and Scopes**.
+
+> Note: a `textMateRules` array in your own settings *replaces* the extension's
+> defaults rather than merging, so include any directives you still want colored.
 
 ## Status
 

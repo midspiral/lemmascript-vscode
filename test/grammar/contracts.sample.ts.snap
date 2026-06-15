@@ -19,7 +19,7 @@
 #^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
 #  ^ source.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
 #   ^ source.ts comment.line.double-slash.ts
-#    ^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript
+#    ^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript.pure
 >function occOf(arr: number[], x: number, n: number): number {
 #^^^^^^^^ source.ts meta.function.ts storage.type.function.ts
 #        ^ source.ts meta.function.ts
@@ -54,7 +54,7 @@
 #  ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
 #    ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
 #     ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
-#      ^^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#      ^^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript.requires
 #              ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
 #               ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts constant.numeric.lemmascript
 #                ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
@@ -69,14 +69,14 @@
 #  ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
 #    ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
 #     ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
-#      ^^^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#      ^^^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript.decreases
 #               ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
 >  //@ type n nat
 #^^ source.ts meta.function.ts meta.block.ts punctuation.whitespace.comment.leading.ts
 #  ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
 #    ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
 #     ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
-#      ^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#      ^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript.type
 #          ^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
 #             ^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts support.type.lemmascript
 >  return n === 0 ? 0 : occOf(arr, x, n - 1) + (arr[n - 1] === x ? 1 : 0);
@@ -142,7 +142,7 @@
 #^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
 #  ^ source.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
 #   ^ source.ts comment.line.double-slash.ts
-#    ^^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript
+#    ^^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript.verify
 >export function majority(arr: number[]): number {
 #^^^^^^ source.ts meta.function.ts keyword.control.export.ts
 #      ^ source.ts meta.function.ts
@@ -167,7 +167,7 @@
 #  ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
 #    ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
 #     ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
-#      ^^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#      ^^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript.requires
 #              ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
 #               ^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.other.quantifier.lemmascript
 #                     ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
@@ -188,7 +188,7 @@
 #  ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
 #    ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
 #     ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
-#      ^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#      ^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript.ensures
 #             ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
 #              ^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts variable.language.result.lemmascript
 #                     ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
@@ -220,7 +220,7 @@
 #  ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
 #    ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
 #     ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
-#      ^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#      ^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript.ensures
 #             ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
 #               ^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.other.quantifier.lemmascript
 #                     ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
@@ -247,7 +247,7 @@
 #  ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
 #    ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
 #     ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
-#      ^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#      ^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript.type
 #          ^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
 #             ^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts support.type.lemmascript
 >  let lo = 0;
@@ -305,7 +305,7 @@
 #    ^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
 #      ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
 #       ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
-#        ^^^^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#        ^^^^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript.invariant
 #                 ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
 #                  ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts constant.numeric.lemmascript
 #                   ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
@@ -320,7 +320,7 @@
 #    ^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
 #      ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
 #       ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
-#        ^^^^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#        ^^^^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript.invariant
 #                 ^^^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
 #                         ^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
 #                            ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
@@ -342,7 +342,7 @@
 #    ^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
 #      ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
 #       ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
-#        ^^^^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#        ^^^^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript.done_with
 #                 ^^^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
 #                         ^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
 #                            ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
@@ -360,7 +360,7 @@
 #    ^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
 #      ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
 #       ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
-#        ^^^^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#        ^^^^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript.decreases
 #                 ^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
 #                      ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
 #                       ^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
@@ -373,7 +373,7 @@
 #    ^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
 #      ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
 #       ^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
-#        ^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#        ^^^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript.assert
 #              ^^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
 #                  ^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
 #                    ^^^ source.ts meta.function.ts meta.block.ts meta.block.ts comment.line.double-slash.ts
@@ -405,14 +405,14 @@
 #  ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
 #    ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
 #     ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
-#      ^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#      ^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript.ghost
 #           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
 >  //@ assume result >= -1
 #^^ source.ts meta.function.ts meta.block.ts punctuation.whitespace.comment.leading.ts
 #  ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
 #    ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
 #     ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
-#      ^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript
+#      ^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript.assume
 #            ^^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
 #                    ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.operator.lemmascript
 #                      ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
@@ -431,7 +431,7 @@
 #^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
 #  ^ source.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
 #   ^ source.ts comment.line.double-slash.ts
-#    ^^^^^^^^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript
+#    ^^^^^^^^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript.declare-type
 #                ^^^^^^^^^^^^ source.ts comment.line.double-slash.ts
 #                            ^ source.ts comment.line.double-slash.ts keyword.operator.lemmascript
 #                             ^ source.ts comment.line.double-slash.ts
@@ -441,32 +441,32 @@
 #^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
 #  ^ source.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
 #   ^ source.ts comment.line.double-slash.ts
-#    ^^^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript
+#    ^^^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript.backend
 #           ^^^^^^ source.ts comment.line.double-slash.ts
 >//@ extern helper
 #^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
 #  ^ source.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
 #   ^ source.ts comment.line.double-slash.ts
-#    ^^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript
+#    ^^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript.extern
 #          ^^^^^^^ source.ts comment.line.double-slash.ts
 >//@ havoc
 #^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
 #  ^ source.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
 #   ^ source.ts comment.line.double-slash.ts
-#    ^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript
+#    ^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript.havoc
 >//@ autohavoc
 #^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
 #  ^ source.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
 #   ^ source.ts comment.line.double-slash.ts
-#    ^^^^^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript
+#    ^^^^^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript.autohavoc
 >//@ safe-slice
 #^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
 #  ^ source.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
 #   ^ source.ts comment.line.double-slash.ts
-#    ^^^^^^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript
+#    ^^^^^^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript.safe-slice
 >//@ assert-shaped
 #^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
 #  ^ source.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
 #   ^ source.ts comment.line.double-slash.ts
-#    ^^^^^^^^^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript
+#    ^^^^^^^^^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript.assert-shaped
 >

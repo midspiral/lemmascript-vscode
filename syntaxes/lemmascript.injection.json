@@ -3,18 +3,51 @@
   "name": "LemmaScript Annotations",
   "scopeName": "lemmascript.injection",
   "injectionSelector": "L:comment.line.double-slash",
-  "patterns": [{ "include": "#annotation" }],
+  "patterns": [{ "include": "#annotations" }],
   "repository": {
-    "annotation": {
-      "comment": "A `//@ <directive> <expr>` LemmaScript contract, injected into TS/JS line comments. The `@` must follow `//` directly; only recognized directives trigger highlighting, so typos and prose stay plain. The expression body is NOT delegated to source.ts: embedding the full TS grammar inside a line comment leaks multi-line state across annotations and bypasses these spec overlays inside nested groups. We tokenize the spec vocabulary directly instead.",
-      "begin": "(?<=//)(@)[ \\t]+(requires|ensures|invariant|decreases|declare-type|done_with|backend|extern|verify|ghost|havoc|assume|assert-shaped|assert|autohavoc|safe-slice|pure|type)\\b",
-      "beginCaptures": {
-        "1": { "name": "punctuation.definition.annotation.lemmascript" },
-        "2": { "name": "keyword.control.lemmascript" }
-      },
-      "end": "(?=$)",
-      "patterns": [{ "include": "#spec" }]
+    "annotations": {
+      "comment": "One rule per directive so each gets its own scope (keyword.control.lemmascript.<name>) and can be themed independently. The `@` must follow `//` directly. `assert-shaped` is listed before `assert` so the longer keyword wins. Only recognized directives trigger highlighting, so typos and prose stay plain. The expression body is tokenized directly (see #spec) rather than by embedding source.ts.",
+      "patterns": [
+        { "include": "#dir-requires" },
+        { "include": "#dir-ensures" },
+        { "include": "#dir-invariant" },
+        { "include": "#dir-decreases" },
+        { "include": "#dir-declare-type" },
+        { "include": "#dir-done_with" },
+        { "include": "#dir-backend" },
+        { "include": "#dir-extern" },
+        { "include": "#dir-verify" },
+        { "include": "#dir-ghost" },
+        { "include": "#dir-havoc" },
+        { "include": "#dir-assume" },
+        { "include": "#dir-assert-shaped" },
+        { "include": "#dir-assert" },
+        { "include": "#dir-autohavoc" },
+        { "include": "#dir-safe-slice" },
+        { "include": "#dir-pure" },
+        { "include": "#dir-type" }
+      ]
     },
+
+    "dir-requires":     { "begin": "(?<=//)(@)[ \\t]+(requires)\\b",     "beginCaptures": { "1": { "name": "punctuation.definition.annotation.lemmascript" }, "2": { "name": "keyword.control.lemmascript.requires" } },     "end": "(?=$)", "patterns": [{ "include": "#spec" }] },
+    "dir-ensures":      { "begin": "(?<=//)(@)[ \\t]+(ensures)\\b",      "beginCaptures": { "1": { "name": "punctuation.definition.annotation.lemmascript" }, "2": { "name": "keyword.control.lemmascript.ensures" } },      "end": "(?=$)", "patterns": [{ "include": "#spec" }] },
+    "dir-invariant":    { "begin": "(?<=//)(@)[ \\t]+(invariant)\\b",    "beginCaptures": { "1": { "name": "punctuation.definition.annotation.lemmascript" }, "2": { "name": "keyword.control.lemmascript.invariant" } },    "end": "(?=$)", "patterns": [{ "include": "#spec" }] },
+    "dir-decreases":    { "begin": "(?<=//)(@)[ \\t]+(decreases)\\b",    "beginCaptures": { "1": { "name": "punctuation.definition.annotation.lemmascript" }, "2": { "name": "keyword.control.lemmascript.decreases" } },    "end": "(?=$)", "patterns": [{ "include": "#spec" }] },
+    "dir-declare-type": { "begin": "(?<=//)(@)[ \\t]+(declare-type)\\b", "beginCaptures": { "1": { "name": "punctuation.definition.annotation.lemmascript" }, "2": { "name": "keyword.control.lemmascript.declare-type" } }, "end": "(?=$)", "patterns": [{ "include": "#spec" }] },
+    "dir-done_with":    { "begin": "(?<=//)(@)[ \\t]+(done_with)\\b",    "beginCaptures": { "1": { "name": "punctuation.definition.annotation.lemmascript" }, "2": { "name": "keyword.control.lemmascript.done_with" } },    "end": "(?=$)", "patterns": [{ "include": "#spec" }] },
+    "dir-backend":      { "begin": "(?<=//)(@)[ \\t]+(backend)\\b",      "beginCaptures": { "1": { "name": "punctuation.definition.annotation.lemmascript" }, "2": { "name": "keyword.control.lemmascript.backend" } },      "end": "(?=$)", "patterns": [{ "include": "#spec" }] },
+    "dir-extern":       { "begin": "(?<=//)(@)[ \\t]+(extern)\\b",       "beginCaptures": { "1": { "name": "punctuation.definition.annotation.lemmascript" }, "2": { "name": "keyword.control.lemmascript.extern" } },       "end": "(?=$)", "patterns": [{ "include": "#spec" }] },
+    "dir-verify":       { "begin": "(?<=//)(@)[ \\t]+(verify)\\b",       "beginCaptures": { "1": { "name": "punctuation.definition.annotation.lemmascript" }, "2": { "name": "keyword.control.lemmascript.verify" } },       "end": "(?=$)", "patterns": [{ "include": "#spec" }] },
+    "dir-ghost":        { "begin": "(?<=//)(@)[ \\t]+(ghost)\\b",        "beginCaptures": { "1": { "name": "punctuation.definition.annotation.lemmascript" }, "2": { "name": "keyword.control.lemmascript.ghost" } },        "end": "(?=$)", "patterns": [{ "include": "#spec" }] },
+    "dir-havoc":        { "begin": "(?<=//)(@)[ \\t]+(havoc)\\b",        "beginCaptures": { "1": { "name": "punctuation.definition.annotation.lemmascript" }, "2": { "name": "keyword.control.lemmascript.havoc" } },        "end": "(?=$)", "patterns": [{ "include": "#spec" }] },
+    "dir-assume":       { "begin": "(?<=//)(@)[ \\t]+(assume)\\b",       "beginCaptures": { "1": { "name": "punctuation.definition.annotation.lemmascript" }, "2": { "name": "keyword.control.lemmascript.assume" } },       "end": "(?=$)", "patterns": [{ "include": "#spec" }] },
+    "dir-assert-shaped":{ "begin": "(?<=//)(@)[ \\t]+(assert-shaped)\\b","beginCaptures": { "1": { "name": "punctuation.definition.annotation.lemmascript" }, "2": { "name": "keyword.control.lemmascript.assert-shaped" } },"end": "(?=$)", "patterns": [{ "include": "#spec" }] },
+    "dir-assert":       { "begin": "(?<=//)(@)[ \\t]+(assert)\\b",       "beginCaptures": { "1": { "name": "punctuation.definition.annotation.lemmascript" }, "2": { "name": "keyword.control.lemmascript.assert" } },       "end": "(?=$)", "patterns": [{ "include": "#spec" }] },
+    "dir-autohavoc":    { "begin": "(?<=//)(@)[ \\t]+(autohavoc)\\b",    "beginCaptures": { "1": { "name": "punctuation.definition.annotation.lemmascript" }, "2": { "name": "keyword.control.lemmascript.autohavoc" } },    "end": "(?=$)", "patterns": [{ "include": "#spec" }] },
+    "dir-safe-slice":   { "begin": "(?<=//)(@)[ \\t]+(safe-slice)\\b",   "beginCaptures": { "1": { "name": "punctuation.definition.annotation.lemmascript" }, "2": { "name": "keyword.control.lemmascript.safe-slice" } },   "end": "(?=$)", "patterns": [{ "include": "#spec" }] },
+    "dir-pure":         { "begin": "(?<=//)(@)[ \\t]+(pure)\\b",         "beginCaptures": { "1": { "name": "punctuation.definition.annotation.lemmascript" }, "2": { "name": "keyword.control.lemmascript.pure" } },         "end": "(?=$)", "patterns": [{ "include": "#spec" }] },
+    "dir-type":         { "begin": "(?<=//)(@)[ \\t]+(type)\\b",         "beginCaptures": { "1": { "name": "punctuation.definition.annotation.lemmascript" }, "2": { "name": "keyword.control.lemmascript.type" } },         "end": "(?=$)", "patterns": [{ "include": "#spec" }] },
+
     "spec": {
       "patterns": [
         { "include": "#result" },

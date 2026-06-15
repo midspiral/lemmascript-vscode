@@ -129,7 +129,7 @@ The annotation grammar matches comments of the form `//@ <directive> <rest>`:
 | Element | Example | Scope (suggested) |
 |---|---|---|
 | Annotation marker | `//@` | `punctuation.definition.annotation.lemmascript` |
-| Directive keyword | `requires`, `ensures`, `invariant`, `decreases`, `type`, `verify`, `ghost`, `assert`, `assume`, `havoc`, `pure`, `extern`, `backend`, `declare-type`, `autohavoc`, `safe-slice`, `done`, `done_with`, `assert-shaped` | `keyword.control.lemmascript` |
+| Directive keyword | `requires`, `ensures`, `invariant`, `decreases`, `type`, `verify`, `ghost`, `assert`, `assume`, `havoc`, `pure`, `extern`, `backend`, `declare-type`, `autohavoc`, `safe-slice`, `done_with`, `assert-shaped` | `keyword.control.lemmascript.<directive>` (one scope per directive, so each is themed independently — `assert-shaped` is matched before `assert` so the longer keyword wins) |
 | Spec operators | `==>`, `<==>` | `keyword.operator.logical.lemmascript` |
 | Quantifiers | `forall`, `exists` | `keyword.other.quantifier.lemmascript` |
 | Result token | `\result` | `variable.language.result.lemmascript` |
@@ -156,13 +156,16 @@ reads as "this is an annotation" while the spec vocabulary pops. (Verified by
 
 ### 4.3 Theming
 
-Scopes are mapped to **standard** TextMate scopes (`keyword.control`,
-`keyword.operator`, `variable.language`, …) so contracts get sensible colors
-under any theme with no extra config. We additionally ship optional, opt-in
-`configurationDefaults` `editor.tokenColorCustomizations` that give the
-annotation marker and directive keyword a distinct accent (so contracts "pop"
-even in themes that under-color comments), gated behind a setting
-(`lemmascript.highlight.accentContracts`, default `true`).
+Non-directive tokens map to **standard** TextMate scopes (`keyword.operator`,
+`variable.language`, `support.type`, …) so they get sensible colors under any
+theme with no extra config. Directives, by contrast, each get a **dedicated
+scope** (`keyword.control.lemmascript.<directive>`) and a **distinct default
+color** shipped via `configurationDefaults` → `editor.tokenColorCustomizations`
+→ `textMateRules` (one rule per directive, `foreground` + bold). Colors are
+mid-tone so they read on both light and dark themes; users override any single
+directive by adding a `textMateRules` entry for its scope. (A `textMateRules`
+array in user settings replaces — does not merge with — the default, so this is
+a documented caveat, not a per-directive toggle.)
 
 ### 4.4 Language configuration
 
