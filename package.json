@@ -40,24 +40,9 @@
       "editor.tokenColorCustomizations": {
         "textMateRules": [
           { "scope": "punctuation.definition.annotation.lemmascript", "settings": { "fontStyle": "bold" } },
-          { "scope": "keyword.control.lemmascript.requires",      "settings": { "foreground": "#1B8A6E", "fontStyle": "bold" } },
-          { "scope": "keyword.control.lemmascript.ensures",       "settings": { "foreground": "#2F74C0", "fontStyle": "bold" } },
-          { "scope": "keyword.control.lemmascript.invariant",     "settings": { "foreground": "#8A5CD1", "fontStyle": "bold" } },
-          { "scope": "keyword.control.lemmascript.decreases",     "settings": { "foreground": "#C08A2E", "fontStyle": "bold" } },
-          { "scope": "keyword.control.lemmascript.done_with",     "settings": { "foreground": "#B05CB0", "fontStyle": "bold" } },
-          { "scope": "keyword.control.lemmascript.assert",        "settings": { "foreground": "#D1742E", "fontStyle": "bold" } },
-          { "scope": "keyword.control.lemmascript.assert-shaped", "settings": { "foreground": "#C0602E", "fontStyle": "bold" } },
-          { "scope": "keyword.control.lemmascript.assume",        "settings": { "foreground": "#C0492E", "fontStyle": "bold" } },
-          { "scope": "keyword.control.lemmascript.ghost",         "settings": { "foreground": "#7E7ED1", "fontStyle": "bold" } },
-          { "scope": "keyword.control.lemmascript.type",          "settings": { "foreground": "#2E86C0", "fontStyle": "bold" } },
-          { "scope": "keyword.control.lemmascript.declare-type",  "settings": { "foreground": "#2E9EC0", "fontStyle": "bold" } },
-          { "scope": "keyword.control.lemmascript.verify",        "settings": { "foreground": "#4F9E3F", "fontStyle": "bold" } },
-          { "scope": "keyword.control.lemmascript.pure",          "settings": { "foreground": "#3FA0A0", "fontStyle": "bold" } },
-          { "scope": "keyword.control.lemmascript.extern",        "settings": { "foreground": "#8A8A4A", "fontStyle": "bold" } },
-          { "scope": "keyword.control.lemmascript.backend",       "settings": { "foreground": "#6E8A9E", "fontStyle": "bold" } },
-          { "scope": "keyword.control.lemmascript.havoc",         "settings": { "foreground": "#B0506E", "fontStyle": "bold" } },
-          { "scope": "keyword.control.lemmascript.autohavoc",     "settings": { "foreground": "#9E5A8A", "fontStyle": "bold" } },
-          { "scope": "keyword.control.lemmascript.safe-slice",    "settings": { "foreground": "#4F9E9E", "fontStyle": "bold" } }
+          { "scope": "keyword.control.lemmascript",          "settings": { "foreground": "#808080", "fontStyle": "bold" } },
+          { "scope": "keyword.control.lemmascript.requires", "settings": { "foreground": "#C08A2E", "fontStyle": "bold" } },
+          { "scope": "keyword.control.lemmascript.ensures",  "settings": { "foreground": "#1B8A6E", "fontStyle": "bold" } }
         ]
       }
     }

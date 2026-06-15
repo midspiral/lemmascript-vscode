@@ -34,9 +34,11 @@ Inside `//@` line comments (and only there — ordinary comments are left alone)
 - Numbers, strings, booleans, and the usual comparison/logic operators.
 
 Spec operators, quantifiers, `\result`, and literals use standard TextMate
-scopes, so they pick up sensible colors from any theme. **Each directive gets
-its own color** (e.g. `requires` is `#1B8A6E`) and is rendered bold, applied via
-the extension's `configurationDefaults`.
+scopes, so they pick up sensible colors from any theme. Directives are rendered
+bold via the extension's `configurationDefaults`, with `requires` in amber
+(`#C08A2E`), `ensures` in teal (`#1B8A6E`), and every other directive in grey
+(`#808080`). Because each directive has its own scope, you can recolor any of
+them individually.
 
 To recolor a single directive, override its scope in your `settings.json`:
 
