@@ -7,9 +7,9 @@ a couple of commands.
 Identity used below:
 
 - **Publisher:** `midspiral`
-- **Extension name:** `lemmascript-vscode`
-- **Extension ID:** `midspiral.lemmascript-vscode`
-- **Marketplace URL (once live):** https://marketplace.visualstudio.com/items?itemName=midspiral.lemmascript-vscode
+- **Extension name:** `lemmascript` (the repo/dir stays `lemmascript-vscode`)
+- **Extension ID:** `midspiral.lemmascript`
+- **Marketplace URL (once live):** https://marketplace.visualstudio.com/items?itemName=midspiral.lemmascript
 
 We publish to **two** registries:
 
@@ -116,11 +116,11 @@ but most are not strictly required to publish.
 
 ```sh
 npm run test:grammar          # grammar snapshot must pass
-npm run package               # produces lemmascript-vscode-<version>.vsix
-code --install-extension lemmascript-vscode-*.vsix   # try it in real VS Code
+npm run package               # produces lemmascript-<version>.vsix
+code --install-extension lemmascript-*.vsix   # try it in real VS Code
 ```
 Open a LemmaScript `.ts` (e.g. from `LemmaScript/examples`) and confirm the
-highlighting. Then `code --uninstall-extension midspiral.lemmascript-vscode` if
+highlighting. Then `code --uninstall-extension midspiral.lemmascript` if
 you want a clean state.
 
 ### 3b. VS Code Marketplace
@@ -133,7 +133,7 @@ npx vsce publish
 npx vsce publish patch        # 0.1.0 -> 0.1.1   (also: minor, major)
 
 # …or publish a prebuilt vsix with a one-off token (good for CI):
-npx vsce publish --packagePath lemmascript-vscode-0.1.0.vsix -p <PAT>
+npx vsce publish --packagePath lemmascript-0.1.0.vsix -p <PAT>
 ```
 Live within a minute or two at the Marketplace URL above.
 
@@ -141,7 +141,7 @@ Live within a minute or two at the Marketplace URL above.
 
 ```sh
 # publish the same vsix:
-npx ovsx publish lemmascript-vscode-0.1.0.vsix -p <OPEN_VSX_TOKEN>
+npx ovsx publish lemmascript-0.1.0.vsix -p <OPEN_VSX_TOKEN>
 
 # …or let ovsx package + publish from source:
 npx ovsx publish -p <OPEN_VSX_TOKEN>
@@ -167,7 +167,7 @@ that project's `.vscode/extensions.json`:
 
 ```json
 {
-  "recommendations": ["midspiral.lemmascript-vscode"]
+  "recommendations": ["midspiral.lemmascript"]
 }
 ```
 

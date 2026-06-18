@@ -1,5 +1,5 @@
 {
-  "name": "lemmascript-vscode",
+  "name": "lemmascript",
   "private": true,
   "displayName": "LemmaScript",
   "description": "Syntax highlighting for LemmaScript contracts in TypeScript — and (later) a viewer for verification results.",
