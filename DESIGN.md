@@ -10,9 +10,10 @@ extension is deliberately a **viewer**. Verification is performed out-of-band by
 agents (or a human) running `lsc` / `dafny`; the extension renders the results
 they produce.
 
-> Companion document: [`LemmaScript/DESIGN_SOURCE_MAP.md`](../LemmaScript/DESIGN_SOURCE_MAP.md)
-> defines the toolchain changes that produce the artifacts this extension
-> consumes (the TS↔Dafny source map and the verification results file). The two
+> The toolchain side — the changes in the
+> [LemmaScript repository](https://github.com/midspiral/LemmaScript) that produce
+> the artifacts this extension consumes (the TS↔Dafny source map and the
+> verification results file) — is designed separately. The two
 > can be built independently; their only coupling is the artifact schema in
 > [§5](#5-verification-results-overlay).
 
@@ -70,20 +71,20 @@ extra diagnostics source. Nothing about the TS experience regresses.
 Two mostly-independent subsystems:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
+┌──────────────────────────────────────────────────────────────┐
 │ A. Contract highlighting        (self-contained, zero deps)  │
 │    syntaxes/lemmascript.injection.json  +  language config   │
-└─────────────────────────────────────────────────────────────┘
+└──────────────────────────────────────────────────────────────┘
 
-┌─────────────────────────────────────────────────────────────┐
+┌───────────────────────────────────────────────────────────────┐
 │ B. Results overlay              (consumes toolchain artifact) │
-│                                                              │
-│   <base>.lemma.json ──▶ ResultsModel ──▶ ┌ DiagnosticsView   │
+│                                                               │
+│   <base>.lemma.json ──▶ ResultsModel ──▶ ┌ DiagnosticsView    │
 │   (+ <base>.dfy.map)      (per .ts file)  ├ DecorationsView   │
 │         ▲                                 ├ StatusBarView     │
 │         │ produced by `lsc check`         ├ CodeLensProvider  │
-│         │ (see DESIGN_SOURCE_MAP.md)      └ TreeView (opt)    │
-└─────────────────────────────────────────────────────────────┘
+│         │ (see the LemmaScript repo)      └ TreeView (opt)    │
+└───────────────────────────────────────────────────────────────┘
 ```
 
 Subsystem A has no runtime dependencies and can ship first. Subsystem B depends
@@ -149,8 +150,9 @@ reads as "this is an annotation" while the spec vocabulary pops. (Verified by
 `vscode-tmgrammar-snap` against VS Code's real TS grammar — see `test/`.)
 
 > The directive keyword list must stay in sync with the parser. Source of truth:
-> `LemmaScript/tools/src/specparser.ts` and `SPEC.md`. The list above is derived
-> from current usage across `LemmaScript/examples`. A small test fixture
+> `tools/src/specparser.ts` and `SPEC.md` in the
+> [LemmaScript repo](https://github.com/midspiral/LemmaScript). The list above is
+> derived from its `examples/`. A small test fixture
 > (`test/fixtures/all-directives.ts`) should exercise every directive so drift
 > is caught.
 
@@ -182,14 +184,14 @@ contribution scoped narrowly. Optional; can be deferred.
 ### 5.1 Input contract (the artifact)
 
 The extension is a pure consumer of two files written next to each `.ts`,
-produced by the toolchain (see `DESIGN_SOURCE_MAP.md` for production):
+produced by the LemmaScript toolchain:
 
 - **`<base>.lemma.json`** — verification results, already mapped to TS
   coordinates. This is the primary input.
 - **`<base>.dfy.map`** — TS↔Dafny line map. Optional for the extension; used
   only for "open the corresponding generated Dafny line" navigation.
 
-Canonical schema lives in `DESIGN_SOURCE_MAP.md §6`. The shape the extension
+The canonical schema is owned by the toolchain; the shape the extension
 relies on:
 
 ```jsonc
@@ -361,7 +363,7 @@ immediately; useful on its own; this is the part that's "ready to start now."
 **Phase 2 — Results overlay.** Subsystem B against the artifact contract:
 artifact loader + model + watcher, diagnostics, gutter decorations, status bar,
 CodeLens, staleness. Requires the toolchain to emit `<base>.lemma.json` (and
-optionally `.dfy.map`) per `DESIGN_SOURCE_MAP.md`. The two can be built in
+optionally `.dfy.map`) on the toolchain side. The two can be built in
 parallel once the schema in §5.1 is frozen.
 
 **Phase 3 — Niceties.** Tree view, hover detail, "open generated Dafny"

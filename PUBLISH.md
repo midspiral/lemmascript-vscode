@@ -147,6 +147,28 @@ npx ovsx publish lemmascript-0.1.0.vsix -p <OPEN_VSX_TOKEN>
 npx ovsx publish -p <OPEN_VSX_TOKEN>
 ```
 
+### 3d. Republishing a new version (e.g. a minor bump)
+
+Every republish needs a **new** version (re-publishing an existing version is
+rejected). Update `CHANGELOG.md` first, then bump + publish. To ship a minor
+release (`0.1.0` → `0.2.0`):
+
+```sh
+# Simplest, on a CLEAN working tree — vsce bumps package.json, commits, tags:
+npx vsce publish minor        # 0.1.0 -> 0.2.0   (also: patch, major)
+git push
+
+# …or without touching git (works with a dirty tree): bump by hand, then publish:
+npm version minor --no-git-tag-version   # writes 0.2.0 into package.json only
+npx vsce publish
+
+# Then mirror the same version to Open VSX (registries don't sync):
+npx ovsx publish "$(ls -t *.vsix | head -1)" -p <OPEN_VSX_TOKEN>
+```
+
+`vsce publish minor` refuses to run if the working tree is dirty (it can't make
+the version commit) — commit your changes first, or use the by-hand path above.
+
 ---
 
 ## 4. Versioning & updates

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1
+
+- Self-contained docs.
+
 ## 0.1.0
 
 Phase 1 — contract syntax highlighting.

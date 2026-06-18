@@ -66,9 +66,9 @@ token's scope with **Developer: Inspect Editor Tokens and Scopes**.
 This is **Phase 1** (highlighting). A later phase will add a *viewer* for
 verification results — showing, on the `.ts`, what verified and what didn't —
 driven by artifacts the LemmaScript toolchain produces. See
-[`DESIGN.md`](DESIGN.md) for the full plan and
-[`../LemmaScript/DESIGN_SOURCE_MAP.md`](../LemmaScript/DESIGN_SOURCE_MAP.md) for
-the toolchain side. The extension does **not** run verification itself.
+[`DESIGN.md`](DESIGN.md) for the full plan; the toolchain side lives in the
+[LemmaScript repository](https://github.com/midspiral/LemmaScript). The
+extension does **not** run verification itself.
 
 ## Development
 
@@ -80,8 +80,9 @@ npm run package             # build a .vsix
 ```
 
 Press `F5` in VS Code to launch an Extension Development Host and open a
-LemmaScript `.ts` file (e.g. one from `LemmaScript/examples`) to see the
-highlighting live.
+LemmaScript `.ts` file (e.g. one from the
+[LemmaScript examples](https://github.com/midspiral/LemmaScript/tree/main/examples))
+to see the highlighting live.
 
 The grammar tests vendor VS Code's bundled `TypeScript.tmLanguage.json` (via
 `scripts/fetch-ts-grammar.mjs`) so the test harness can establish the comment

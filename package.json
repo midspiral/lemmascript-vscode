@@ -4,7 +4,7 @@
   "displayName": "LemmaScript for VS Code",
   "description": "Syntax highlighting for LemmaScript contracts in TypeScript — and (later) a viewer for verification results.",
   "icon": "images/icon.png",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "preview": true,
   "publisher": "midspiral",
   "license": "MIT",
