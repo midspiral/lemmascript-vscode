@@ -11,6 +11,7 @@ formatting are untouched. We only add paint inside `//@` comments so contracts
 read like a first-class spec language instead of grey prose.
 
 ```ts
+//@ contract Returns a value occurring in more than half of arr, or -1 if none.
 //@ requires forall(k: nat, k < arr.length ==> arr[k] >= 0)
 //@ ensures \result === -1 || (\result >= 0 && 2 * occOf(arr, \result, arr.length) > arr.length)
 export function majority(arr: number[]): number {
