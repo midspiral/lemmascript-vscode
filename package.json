@@ -42,7 +42,8 @@
           { "scope": "punctuation.definition.annotation.lemmascript", "settings": { "fontStyle": "bold" } },
           { "scope": "keyword.control.lemmascript",          "settings": { "foreground": "#808080", "fontStyle": "bold" } },
           { "scope": "keyword.control.lemmascript.requires", "settings": { "foreground": "#C08A2E", "fontStyle": "bold" } },
-          { "scope": "keyword.control.lemmascript.ensures",  "settings": { "foreground": "#1B8A6E", "fontStyle": "bold" } }
+          { "scope": "keyword.control.lemmascript.ensures",  "settings": { "foreground": "#1B8A6E", "fontStyle": "bold" } },
+          { "scope": "keyword.control.lemmascript.contract", "settings": { "foreground": "#AD3DA4", "fontStyle": "bold" } }
         ]
       }
     }

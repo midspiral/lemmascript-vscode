@@ -162,6 +162,13 @@
 #                                         ^^^^^^ source.ts meta.function.ts meta.return.type.ts support.type.primitive.ts
 #                                               ^ source.ts meta.function.ts meta.return.type.ts
 #                                                ^ source.ts meta.function.ts meta.block.ts punctuation.definition.block.ts
+>  //@ contract Returns a value occurring in more than half of arr, or -1 if none.
+#^^ source.ts meta.function.ts meta.block.ts punctuation.whitespace.comment.leading.ts
+#  ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#    ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#     ^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
+#      ^^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts keyword.control.lemmascript.contract
+#              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts
 >  //@ requires forall(k: nat, k < arr.length ==> arr[k] >= 0)
 #^^ source.ts meta.function.ts meta.block.ts punctuation.whitespace.comment.leading.ts
 #  ^^ source.ts meta.function.ts meta.block.ts comment.line.double-slash.ts punctuation.definition.comment.ts

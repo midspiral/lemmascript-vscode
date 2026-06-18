@@ -129,7 +129,7 @@ The annotation grammar matches comments of the form `//@ <directive> <rest>`:
 | Element | Example | Scope (suggested) |
 |---|---|---|
 | Annotation marker | `//@` | `punctuation.definition.annotation.lemmascript` |
-| Directive keyword | `requires`, `ensures`, `invariant`, `decreases`, `type`, `verify`, `ghost`, `assert`, `assume`, `havoc`, `pure`, `extern`, `backend`, `declare-type`, `autohavoc`, `safe-slice`, `done_with`, `assert-shaped` | `keyword.control.lemmascript.<directive>` (one scope per directive, so each is themed independently — `assert-shaped` is matched before `assert` so the longer keyword wins) |
+| Directive keyword | `requires`, `ensures`, `invariant`, `decreases`, `type`, `verify`, `ghost`, `assert`, `assume`, `havoc`, `pure`, `extern`, `backend`, `declare-type`, `contract`, `autohavoc`, `safe-slice`, `done_with`, `assert-shaped` | `keyword.control.lemmascript.<directive>` (one scope per directive, so each is themed independently — `assert-shaped` is matched before `assert` so the longer keyword wins; `contract`'s body is natural-language prose, so only the keyword is tokenized) |
 | Spec operators | `==>`, `<==>` | `keyword.operator.logical.lemmascript` |
 | Quantifiers | `forall`, `exists` | `keyword.other.quantifier.lemmascript` |
 | Result token | `\result` | `variable.language.result.lemmascript` |

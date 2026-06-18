@@ -15,6 +15,7 @@ function occOf(arr: number[], x: number, n: number): number {
 
 //@ verify
 export function majority(arr: number[]): number {
+  //@ contract Returns a value occurring in more than half of arr, or -1 if none.
   //@ requires forall(k: nat, k < arr.length ==> arr[k] >= 0)
   //@ ensures \result === -1 || (\result >= 0 && 2 * occOf(arr, \result, arr.length) > arr.length)
   //@ ensures (exists(x: nat, 2 * occOf(arr, x, arr.length) > arr.length)) ==> \result !== -1

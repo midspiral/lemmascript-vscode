@@ -26,7 +26,8 @@ Inside `//@` line comments (and only there — ordinary comments are left alone)
 
 - **Directives** — `requires`, `ensures`, `invariant`, `decreases`, `type`,
   `verify`, `ghost`, `assert`, `assume`, `havoc`, `pure`, `extern`, `backend`,
-  `declare-type`, `autohavoc`, `safe-slice`, `done_with`, `assert-shaped`.
+  `declare-type`, `contract`, `autohavoc`, `safe-slice`, `done_with`,
+  `assert-shaped`.
 - **Spec operators** — implication `==>`, bi-implication `<==>`.
 - **Quantifiers** — `forall`, `exists`.
 - **The result keyword** — `\result`.
@@ -36,8 +37,10 @@ Inside `//@` line comments (and only there — ordinary comments are left alone)
 Spec operators, quantifiers, `\result`, and literals use standard TextMate
 scopes, so they pick up sensible colors from any theme. Directives are rendered
 bold via the extension's `configurationDefaults`, with `requires` in amber
-(`#C08A2E`), `ensures` in teal (`#1B8A6E`), and every other directive in grey
-(`#808080`). Because each directive has its own scope, you can recolor any of
+(`#C08A2E`), `ensures` in teal (`#1B8A6E`), `contract` (the natural-language
+statement of intent) in pink-purple (`#AD3DA4`), and every other directive in
+grey (`#808080`). The accents are mid-tones chosen to read on both light and
+dark themes. Because each directive has its own scope, you can recolor any of
 them individually.
 
 To recolor a single directive, override its scope in your `settings.json`:
