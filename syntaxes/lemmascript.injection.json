@@ -86,10 +86,15 @@
       "name": "constant.numeric.lemmascript"
     },
     "string": {
+      "comment": "Backslash escapes (e.g. \\\") are consumed so a `\\\"` does not end the string early.",
       "patterns": [
-        { "begin": "\"", "end": "\"", "name": "string.quoted.double.lemmascript" },
-        { "begin": "'", "end": "'", "name": "string.quoted.single.lemmascript" }
+        { "begin": "\"", "end": "\"", "name": "string.quoted.double.lemmascript", "patterns": [{ "include": "#string-escape" }] },
+        { "begin": "'", "end": "'", "name": "string.quoted.single.lemmascript", "patterns": [{ "include": "#string-escape" }] }
       ]
+    },
+    "string-escape": {
+      "match": "\\\\.",
+      "name": "constant.character.escape.lemmascript"
     },
     "implies": {
       "comment": "Logical implication / bi-implication. Matched before the generic operator rule so `==>` is not split into `==` and `>`.",

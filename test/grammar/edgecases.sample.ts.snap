@@ -1,0 +1,30 @@
+>// Grammar edge cases.
+#^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#  ^^^^^^^^^^^^^^^^^^^^ source.ts comment.line.double-slash.ts
+>
+>// An escaped quote inside a spec string must not let the string scope run past
+#^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.ts comment.line.double-slash.ts
+>// the closing quote — the `\"` is an escape, and `&& x > 0` stays tokenized.
+#^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.ts comment.line.double-slash.ts
+>//@ ensures s === "a\"b" && x > 0
+#^^ source.ts comment.line.double-slash.ts punctuation.definition.comment.ts
+#  ^ source.ts comment.line.double-slash.ts punctuation.definition.annotation.lemmascript
+#   ^ source.ts comment.line.double-slash.ts
+#    ^^^^^^^ source.ts comment.line.double-slash.ts keyword.control.lemmascript.ensures
+#           ^^^ source.ts comment.line.double-slash.ts
+#              ^^^ source.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                 ^ source.ts comment.line.double-slash.ts
+#                  ^ source.ts comment.line.double-slash.ts string.quoted.double.lemmascript
+#                   ^ source.ts comment.line.double-slash.ts string.quoted.double.lemmascript
+#                    ^^ source.ts comment.line.double-slash.ts string.quoted.double.lemmascript constant.character.escape.lemmascript
+#                      ^ source.ts comment.line.double-slash.ts string.quoted.double.lemmascript
+#                       ^ source.ts comment.line.double-slash.ts string.quoted.double.lemmascript
+#                        ^ source.ts comment.line.double-slash.ts
+#                         ^^ source.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                           ^^^ source.ts comment.line.double-slash.ts
+#                              ^ source.ts comment.line.double-slash.ts keyword.operator.lemmascript
+#                               ^ source.ts comment.line.double-slash.ts
+#                                ^ source.ts comment.line.double-slash.ts constant.numeric.lemmascript
+>
