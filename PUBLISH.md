@@ -32,6 +32,7 @@ The Marketplace is backed by Azure DevOps, so the token comes from there.
 1. **Create an Azure DevOps organization** (if you don't have one):
    https://dev.azure.com — sign in with a Microsoft account, create any org.
 2. **Create a Personal Access Token (PAT):**
+   - https://dev.azure.com/midspiral/_usersSettings/tokens
    - Azure DevOps → top-right user icon → **Personal Access Tokens** → **New Token**.
    - **Organization:** select **All accessible organizations** (critical — a
      single-org token fails to publish).
