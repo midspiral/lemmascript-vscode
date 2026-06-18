@@ -1,7 +1,7 @@
 {
   "name": "lemmascript",
   "private": true,
-  "displayName": "LemmaScript",
+  "displayName": "LemmaScript for VS Code",
   "description": "Syntax highlighting for LemmaScript contracts in TypeScript — and (later) a viewer for verification results.",
   "icon": "images/icon.png",
   "version": "0.1.0",
