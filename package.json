@@ -2,6 +2,7 @@
   "name": "lemmascript-vscode",
   "displayName": "LemmaScript",
   "description": "Syntax highlighting for LemmaScript contracts in TypeScript — and (later) a viewer for verification results.",
+  "icon": "images/icon.png",
   "version": "0.1.0",
   "preview": true,
   "publisher": "midspiral",
