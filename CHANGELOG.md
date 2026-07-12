@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.2 (unreleased)
+## 0.1.2
 
 - Escaped quotes in spec strings (e.g. `\"`) tokenize correctly instead of leaking the string highlight to the rest of the line.
 
