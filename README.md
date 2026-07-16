@@ -1,5 +1,7 @@
 # LemmaScript for VS Code
 
+Install the VSCode extension for LemmaScript from the [marketplace](https://marketplace.visualstudio.com/items?itemName=midspiral.lemmascript).
+
 Syntax highlighting for [LemmaScript](https://github.com/midspiral/LemmaScript)
 contracts in TypeScript — the `//@` specification annotations
 (`requires`, `ensures`, `invariant`, …) that LemmaScript compiles to Dafny for
